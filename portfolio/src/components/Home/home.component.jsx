@@ -9,9 +9,9 @@ export const Homecomponent = () => {
       <Navbar></Navbar>
       {/* <Loading></Loading> */}
       <div>
-        <div className=" my-10 w-[100vw] p-6 flex flex-col-reverse lg:flex-row lg:flex  justify-around">
+        <div className=" my-10 w-[100vw] p-6  flex flex-col-reverse lg:flex-row lg:flex  justify-around">
 
-          <div className="w-[90vw] lg:w-[25vw]">
+          <div className="w-[90vw] lg:w-[25vw] my-14">
             <h3 className="text-center lg:text-left">Software Developper</h3>
 
             <div className="lg:w-[25vw] w-[90vw]">
