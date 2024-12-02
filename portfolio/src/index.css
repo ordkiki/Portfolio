@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: rgba(255, 255, 255, 0.87);
+  --green: #0fe2a3;
+  background-color: #101013;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.bg-green{
+  background-color: var(--green);
+}
+
+.text-green{
+  color: var(--green);
+}
+
+.border-green{
+  border:var(--green) 1px solid;
+  padding: 5px 20px;
+  font-size: 14px;
+  border-radius: 20px;
+}
+
+
+.social-item:hover{
+  scale: 1.2;
+  transition: all ease-in-out 0.2s;
+  border:var(--green) 1px solid;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.Navbar li .link-style{
+  position: relative;
+  width: 0;
+  
+}
+.Navbar li .link-style:hover{
+  color: var(--green);
+  position: relative;
+  width: 0;
+  
+}
+
+.Navbar li .link-style::before{
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+}
+
+.Navbar li .link-style:hover::before{
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: -5px 0;
+  height: 3px;
+  background-color: var(--green);
+  width: 100%;
+  transition: all ease-in-out 0.3s;
+}
+
+.border-green{
+  border: #0fe2a3 ;
+  /* border-style: ; */
+}
