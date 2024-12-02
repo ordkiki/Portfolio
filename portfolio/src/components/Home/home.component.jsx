@@ -1,4 +1,5 @@
 import Navbar from "../navbar/Navbar"
+import image from "../../assets/image.png"
 // import { FaReact, FaNodeJs } from "react-icons/fa6"
 import { FaDownload, FaLinkedin, FaFacebook, FaTwitter } from "react-icons/fa6"
 import Competence from "./Competence"
@@ -38,8 +39,11 @@ export const Homecomponent = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center w-[90vw] lg:w-[30vw] my-10 items-center">
-            <div className=" cercle size-[40vh] bg-green rounded-[50%]">
+          <div className="relative flex justify-center w-[90vw]  h-[40vh] lg:w-[30vw] my-10 items-center">
+            <div className="object-cover w-[50vh] rounded-full overflow-hidden h-[50vh]">
+              <img src={image} alt="" className=" object-cover w-[50vw] h-[50vh]"/>
+            </div>
+            <div className=" cercle w-[50vh] shadow-[var(--green)] shadow-md h-[50vh] border-solid border-[3px] border-t-[var(--green)] border-transparent absolute animate-spin rounded-full">
             </div>
           </div>
         </div>
