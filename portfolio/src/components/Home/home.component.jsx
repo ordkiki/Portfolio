@@ -28,14 +28,14 @@ export const Homecomponent = () => {
               Modi quaerat cumque sit nemo esse soluta laboriosam tempora quia debitis nostrum?
             </p>
 
-            <div className="w-[90vw] lg:w-[25vw] flex items-center justify-between">
+            <div className="w-[90vw] lg:w-[25vw] flex justify-between items-center">
               <div>
-                <button className="  flex  items-center  text-green border-green">DOWNLOAD CV <FaDownload className="ml-5"></FaDownload></button>
+                <button className="  flex  items-center text-[14px]  text-green border p-2 rounded-lg">DOWNLOAD <FaDownload className="ml-5"></FaDownload></button>
               </div>
-              <div className="social flex items-center justify-between w-[40vw]">
-                <FaTwitter className="text-2xl mx-2 social-item text-green"></FaTwitter>
-                <FaFacebook className="text-2xl mx-2 social-item text-green"></FaFacebook>
-                <FaLinkedin className="text-2xl mx-2 social-item text-green"></FaLinkedin>
+              <div className="social flex ">
+                <FaTwitter className="text-2xl mx-1 social-item text-green"></FaTwitter>
+                <FaFacebook className="text-2xl mx-1 social-item text-green"></FaFacebook>
+                <FaLinkedin className="text-2xl mx-1 social-item text-green"></FaLinkedin>
               </div>
             </div>
           </div>
