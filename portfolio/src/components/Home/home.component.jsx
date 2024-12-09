@@ -28,7 +28,7 @@ export const Homecomponent = () => {
               Modi quaerat cumque sit nemo esse soluta laboriosam tempora quia debitis nostrum?
             </p>
 
-            <div className="w-[90vw] lg:w-[25vw] flex justify-between items-center">
+            <div className="w-[80vw] lg:w-[25vw] flex justify-between items-center">
               <div>
                 <button className="  flex  items-center text-[14px]  text-green border p-2 rounded-lg">DOWNLOAD <FaDownload className="ml-5"></FaDownload></button>
               </div>
@@ -39,13 +39,21 @@ export const Homecomponent = () => {
               </div>
             </div>
           </div>
-          <div className="relative flex justify-center w-[90vw]  h-[40vh] lg:w-[30vw] my-10 items-center">
-            <div className="object-cover w-[50vh] rounded-full overflow-hidden h-[50vh]">
-              <img src={image} alt="" className=" object-cover w-[50vw] h-[50vh]"/>
+          <div className="-z-20  mx-5 relative flex justify-center w-[80vw] h-[40vh] lg:w-[30vw] my-10 items-center">
+            {/* Cercle animé (arrière-plan) */}
+            <div className="cercle w-[80vw] h-[80vw] sm:w-[30vw] sm:h-[30vw] lg:w-[20vw] lg:h-[20vw] 
+      shadow-[var(--green)] shadow-md border-solid border-[3px] 
+      border-t-[var(--green)] border-transparent absolute animate-spin 
+      rounded-full z-0">
             </div>
-            <div className=" cercle w-[50vh] shadow-[var(--green)] shadow-md h-[50vh] border-solid border-[3px] border-t-[var(--green)] border-transparent absolute animate-spin rounded-full">
+
+            {/* Conteneur de l'image (premier plan) */}
+            <div className=" object-cover w-[80vw] rounded-full overflow-hidden h-[80vw] sm:w-[30vw] sm:h-[30vw] lg:w-[20vw] lg:h-[20vw] z-10">
+              <img src={image} alt="cercle" className="object-cover w-full h-full -z-20" />
             </div>
           </div>
+
+
         </div>
 
         <div className="items-center h-screen lg:h-fit  flex justify-center ">
@@ -55,18 +63,18 @@ export const Homecomponent = () => {
               number="12"
               titre=" years"
               titreSuite="of experience"
-              />
+            />
             <Competence
               number="281"
               titre=" commit"
               titreSuite="in git"
-              />
+            />
             <Competence
               number="3"
               titre=" project"
               titreSuite="done"
-              />
-            </div>
+            />
+          </div>
 
         </div>
       </div>
