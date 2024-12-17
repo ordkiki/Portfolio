@@ -4,11 +4,11 @@ function Contactcomponent() {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="p-6 lg:flex block justify-around items-center h-[90vh]">
-        <div className="bg-[rgba(240,254,245,0.1)] rounded-md p-4 w-[90vw] lg:w-[32vw] h-[70vh]">
-          <h3 className="text-green font-semibold text-[24px]">Let's work together</h3>
+      <div className="p-10 lg:flex block justify-around items-center h-[90vh]">
+        <div className="bg-[rgba(240,254,245,0.1)] rounded-md p-4 w-[90vw] lg:w-[32vw] h-[75vh]">
+          <h3 className="text-green font-semibold text-[24px]">Let s work together</h3>
           <p className="text-[rgba(240,254,245,0.5)] my-4 text-[12px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero excepturi nesciunt voluptas ad, neque atque.</p>
-          <form action="" method="get">
+          <form action="" method="get" className="">
             
               <div className="block lg:flex my-4 justify-around w-[100%]">
                 <input className=" bg-[rgba(0,0,0,0.4)] lg:w-[47%] w-[83vw] outline-none p-[2px] lg:m-0 my-2 " placeholder="First name" type="Firstname" />
@@ -24,6 +24,9 @@ function Contactcomponent() {
 
               <div className="my-4 flex justify-center w-[100%]">
                 <textarea className=" bg-[rgba(0,0,0,0.4)]  w-[98%] outline-none p-[10px] h-[27vh]" placeholder="Message" type="text" />
+              </div>
+              <div className="px-4">
+                <button className="bg-[var(--green)] p-1 text-black rounded-lg">Send message</button>
               </div>
           </form>
         </div>
@@ -50,6 +53,7 @@ function Contactcomponent() {
               <p>Tana 101 Antananarivo</p>
             </div>
           </div>
+
 
 
         </div>
