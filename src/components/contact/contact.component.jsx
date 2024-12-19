@@ -19,7 +19,7 @@ function Contactcomponent() {
     try {
       console.log(FormData);
       
-      await axios.post("http://localhost/Portfolio/Visiteur/Add",
+      await axios.post("http://localhost/API-Portfolio/Visiteur/Add",
         FormData,
         {
           headers: { "Content-Type": "application/json" },
