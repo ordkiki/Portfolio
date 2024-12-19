@@ -2,6 +2,7 @@ import { FaLocationDot, FaMessage, FaPhone } from "react-icons/fa6"
 import Navbar from "../navbar/Navbar"
 import { useEffect, useState } from "react"
 import Loading from "../loader/spinner";
+import axios from "axios";
 
 function Contactcomponent() {
 
@@ -13,8 +14,21 @@ function Contactcomponent() {
       [name]: value,
     })
   }
-  const handlSubmit = (e) => {
+  const handlSubmit = async (e) => {
     e.preventDefault();
+    try {
+      console.log(FormData);
+      
+      await axios.post("http://localhost/Portfolio/Visiteur/Add",
+        FormData,
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      )
+    } catch (error) {
+      console.log(error);
+      
+    }
     alert("Votre message est envoyé avec succes");
     
   }
@@ -44,7 +58,7 @@ function Contactcomponent() {
               <div className="block lg:flex my-4 justify-around w-[100%]">
                 <input 
                   onChange={handleChange} 
-                  name="FirstName" 
+                  name="Name" 
                   className=" px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[47%] w-[83vw] outline-none p-[4px] lg:m-0 my-2 " 
                   placeholder="Name" type="Name" />
                 <input 
@@ -52,21 +66,25 @@ function Contactcomponent() {
                   name="LastName" 
                   className=" px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[47%] w-[83vw] outline-none p-[4px] lg:m-0  my-2" placeholder="Last name" type="Last name" />
               </div>
+
               <div className="block lg:flex my-2 justify-around w-[100%]">
                 <input 
                   onChange={handleChange} 
                   name="Email" 
-                  className=" px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[47%] w-[83vw] outline-none p-[4px] lg:m-0  my-2" placeholder="Email adress" type="email" />
+                  className=" px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[47%] w-[83vw] outline-none p-[4px] lg:m-0  my-2" 
+                  placeholder="Email adress" type="email" />
                 <input 
                   onChange={handleChange} 
-                  name="Number" 
-                  className=" px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[47%] w-[83vw] outline-none p-[4px] lg:m-0  my-2" placeholder="Phone number" type="number" />
+                  name="Telephone" 
+                  className=" px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[47%] w-[83vw] outline-none p-[4px] lg:m-0  my-2" 
+                  placeholder="Phone number" type="number" />
               </div>
               <div className="my-4 flex justify-around w-[100%]">
                 <input 
                   onChange={handleChange} 
                   name="Country" 
-                  className=" px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[96%] w-[83vw] outline-none p-[4px]" placeholder="select country" type="Firstname" />
+                  className=" px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[96%] w-[83vw] outline-none p-[4px]" 
+                  placeholder="select country" type="name" />
               </div>
 
               <div className="my-4 flex justify-center w-[100%]">
@@ -78,8 +96,9 @@ function Contactcomponent() {
               <div className="px-4">
                 <button 
                   type="submit"
+                  name="Envoyer"
                   onClick={handlSubmit}
-                  className="bg-[var(--green)] p-1 text-black rounded-lg">Send message</button>
+                  className="bg-[var(--green)] p-1 text-black rounded-lg">Envoyer</button>
               </div>
           </form>
         </div>

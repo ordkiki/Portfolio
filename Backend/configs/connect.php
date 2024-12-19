@@ -3,7 +3,7 @@
         private $host="localhost";
         private $name="root";
         private $pass="";
-        private $db_name="db_portfolio";
+        private $db_name="Portfolio";
         public $conn;
 
         public function GetConnection(){
