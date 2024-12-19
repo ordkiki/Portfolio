@@ -1,7 +1,24 @@
+import { useEffect, useState } from "react";
+import Loading from "../loader/spinner";
 import Navbar from "../navbar/Navbar"
+
 import { BsArrowDownRight } from "react-icons/bs"
 function Service(props) {
-  return (
+  const [isload, setLoad] = useState(true)
+  useEffect(() => {
+    const LoadData = () => {
+      setTimeout(() => {
+        setLoad(false);
+        
+      }, 1000);
+    };
+
+    LoadData();
+  }, []);
+
+  return isload ? 
+    (<Loading/>)
+    : (
     <div className="hover:text-[var(--green)] transition-colors text-[rgba(255,255,255,0.7)] w-[80vw] lg:w-[35vw] p-2">
       <div className="flex items-center justify-between w-[80vw] lg:w-[35vw]">
         <h3 className="font-thin text-5xl w-fit">{props.num}</h3>

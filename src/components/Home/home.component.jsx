@@ -1,11 +1,41 @@
+
 import Navbar from "../navbar/Navbar"
 import image from "../../assets/image.png"
+// import  cv  from "../../assets/pdf/CV_RAKOTOARINO_Onjaniaina_Rolland.pdf";
+// import axios from "axios";
 // import { FaReact, FaNodeJs } from "react-icons/fa6"
 import { FaDownload, FaLinkedin, FaFacebook, FaTwitter } from "react-icons/fa6"
 import Competence from "./Competence"
-export const Homecomponent = () => {
+import { useEffect, useState } from "react";
+import Loading from "../loader/spinner";
 
-  return (
+export const Homecomponent = () => {
+  const [isload, setLoad] = useState(true)
+  const pdf_CV_URL = 'http://localhost:5173/CV_RAKOTOARINO_Onjaniaina_Rolland.pdf';
+  const DonwloadCV = (url) => {
+    const filename = url.split("/").pop();
+    const aTag = document.createElement("a");
+    aTag.href = url;
+    aTag.setAttribute("download", filename);
+    document.body.appendChild(aTag);
+    aTag.click();
+    aTag.remove();
+  
+  }
+  useEffect(() => {
+    const LoadData = () => {
+      setTimeout(() => {
+        setLoad(false);
+        
+      }, 1000);
+    };
+
+    LoadData();
+  }, []);
+
+  return isload ? 
+    (<Loading/>)
+    : (
     <div>
       <Navbar></Navbar>
       {/* <Loading></Loading> */}
@@ -13,7 +43,7 @@ export const Homecomponent = () => {
         <div className=" my-10 w-[100vw] p-6  flex flex-col-reverse lg:flex-row lg:flex  justify-around">
 
           <div className="w-[90vw] lg:w-[25vw] my-14">
-            <h3 className="text-center lg:text-left">Software Developper</h3>
+            <h3 className="text-center lg:text-left">Developper Web & Mob</h3>
 
             <div className="lg:w-[25vw] w-[90vw]">
               <h1 className="text-center lg:text-left text-3xl my-4">
@@ -30,7 +60,13 @@ export const Homecomponent = () => {
 
             <div className="w-[80vw] lg:w-[25vw] flex justify-between items-center">
               <div>
-                <button className="  flex  items-center text-[14px]  text-green border p-2 rounded-lg">DOWNLOAD <FaDownload className="ml-5"></FaDownload></button>
+                <button
+                  onClick={()=>{DonwloadCV(pdf_CV_URL)}} 
+                  className="  flex  items-center text-[14px]  text-green border p-2 rounded-lg">
+                    DOWNLOAD 
+                    <FaDownload className="ml-5">
+                    </FaDownload>
+                </button>
               </div>
               <div className="social flex ">
                 <FaTwitter className="text-2xl mx-1 social-item text-green"></FaTwitter>
@@ -49,7 +85,7 @@ export const Homecomponent = () => {
 
             {/* Conteneur de l'image (premier plan) */}
             <div className=" object-cover w-[80vw] rounded-full overflow-hidden h-[80vw] sm:w-[30vw] sm:h-[30vw] lg:w-[20vw] lg:h-[20vw] z-10">
-              <img src={image} alt="cercle" className="object-cover w-full h-full -z-20" />
+              <img src={image} alt="cercle" className="opacity-70 object-cover w-full h-full -z-20" />
             </div>
           </div>
 
@@ -60,7 +96,7 @@ export const Homecomponent = () => {
           <div className="lg:flex block lg:justify-around  w-[95vw]">
 
             <Competence
-              number="12"
+              number=""
               titre=" years"
               titreSuite="of experience"
             />

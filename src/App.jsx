@@ -5,6 +5,7 @@ import Contactcomponent from "./components/contact/contact.component"
 import ResumeComponent from "./components/Resume/resume.component"
 import Loading from "./components/loader/spinner"
 import { useEffect, useState } from "react"
+import Work from "./components/project/project.component"
 
 export default function App() {
   const [isload, setLoad] = useState(true)
@@ -26,7 +27,7 @@ export default function App() {
       <Routes>
         <Route index path="/" element={<Homecomponent />} />
         <Route path="/Service" element={<ServiceComponent />} />
-        <Route path="/Service" element={<ServiceComponent />} />
+        <Route path="/Work" element={<Work />} />
         <Route path="/Contact" element={<Contactcomponent />} />
         <Route path="/Resume" element={<ResumeComponent />} />
       </Routes>

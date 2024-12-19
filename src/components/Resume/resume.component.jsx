@@ -1,9 +1,10 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Navbar from "../navbar/Navbar"
 import Education from "./education";
 import Experience from "./expercience";
 import About from "./about";
 import Skills from "./skills";
+import Loading from "../loader/spinner";
 
 function ResumeComponent() {
   const [Info, SetInfo] = useState("Education");
@@ -12,7 +13,21 @@ function ResumeComponent() {
     SetInfo(e.target.name);   
   }
 
-  return (
+  const [isload, setLoad] = useState(true)
+  useEffect(() => {
+    const LoadData = () => {
+      setTimeout(() => {
+        setLoad(false);
+        
+      }, 1000);
+    };
+
+    LoadData();
+  }, []);
+
+  return isload ? 
+    (<Loading/>)
+    : (
     <div>
       <Navbar></Navbar>
       <div className="block lg:flex justify-around  lg:p-10 items-center accueil h-fit lg:h-[70vh]">
