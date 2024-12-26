@@ -1,20 +1,22 @@
 import { useState } from "react"
-import image from '../../assets/image.png'
-import image2 from '../../assets/react.svg'
+import Ecole_manager from '../../assets/Projet/Ecole_manager.png'
+import portfolio from '../../assets/Projet/portfolio.png'
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 
 function Carousel() {
     const [Current, SetCurrent] = useState(0);
     const Items = [
         {
-            "id" : 1,
-            "image" : image,
-            "Titre " : "Titre image",
+            "id": 1,
+            "image": portfolio,
+            "Titre ": "Portfolio",
+            "link ": "/ordkiki.vercel.app",
         },
         {
-            "id" : 2,
-            "image" : image2,
-            "Titre " : "Titre image2",
+            "id": 2,
+            "image": Ecole_manager,
+            "Titre ": "/Ecole_manager",
+            "link ": "/Ecole_manager.vercel.app",
         }
 
     ]
@@ -22,38 +24,57 @@ function Carousel() {
         SetCurrent(Current === Items.length - 1 ? 0 : Current + 1)
     }
     const PrevCarousel = () => {
-        SetCurrent(Current === Items.length - 1 ? 0 : Current - 1)
+        SetCurrent(Current === 0 ? Items.length - 1 : Current - 1)
     }
     return (
-        <div className="w-[100vw] h-[90vh] p-4  flex justify-center items-center">
+        <div className="w-[100vw] h-[80vh] p-4  flex justify-center items-center">
             <div >
                 <h3 className="text-2xl my-4">Mes projets</h3>
-                <div className="block lg:flex  flex-row justify-center items-center">
-                    <div className="lg:w-[30vw] w-full my-4 ">
-                        {Items.map((item, index) =>
-                                    Current === index && (
-                                        <div className="flex items-center justify-between lg:w-[28vw] w-full " key={index}>
-                                            <h3   className="font-semibold text-9xl my-4"> {item.id} </h3>      
-                                            <h3 className="text-xl font-semibold mx-4">   {item["Titre "]}</h3>
-                                        </div>
-                                    )
-                        )}
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste rem autem in temporibus excepturi beatae.</p>
+                <div className="block lg:flex flex-row-reverse   justify-center items-center">
 
-                    </div>
-                    <div className="border  flex justify-between items-center">
-                        <BiLeftArrow onClick={PrevCarousel} className="text-2xl"/>
-                        <div className="object-cover  w-full lg:w-[35vw] p-4 h-[50vh] justify-center items-center flex">
+                    <div className="  flex justify-between items-center w-[90vw] lg:w-[40vw]">
+                        <BiLeftArrow onClick={PrevCarousel} className="text-3xl bg-[rgba(255,255,255,0.1)] p-2 rounded-full cursor-pointer hover:scale-[1.2] transition " />
+                        <div className="object-cover  w-full lg:w-[42vw] p-4 h-[50vh] justify-center items-center flex">
+
                             {
+
                                 Items.map((item, index) =>
                                     Current === index && (
-                                        <img src={item.image} key={index} alt="img" className=" h-[50vh] w-full"/>
+                                        <div className="" key={index}>
+                                            <h3 className="text-xl font-semibold my-4">   {item["Titre "]}</h3>
+                                            <div>
+                                                <img src={item.image}  alt="img" className="cursor-pointer object-cover bg-white p-1 sm:h-[20vh] lg:h-[40vh] w-full" />
+                                            </div>
+                                        </div>
                                     )
                                 )
                             }
 
                         </div>
-                        <BiRightArrow onClick={NextCarousel} className="text-2xl"/>
+                        <BiRightArrow onClick={NextCarousel} className="text-3xl bg-[rgba(255,255,255,0.1)] p-2 rounded-full cursor-pointer hover:scale-[1.2] transition" />
+                    </div>
+
+                    <div className="lg:w-[30vw] w-full my-4 ">
+                        {Items.map((item, index) =>
+                            Current === index && (
+                                <div className=" items-center justify-between lg:w-[30vw] w-full " key={index}>
+                                    <h3 className="font-semibold text-7xl my-4"> {item.id} </h3>
+                                    
+                                </div>
+                            )
+                        )}
+                        <p className="w-full lg:w-[30vw] text-[15px]">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt et dolorem praesentium, 
+                            quisquam illo necessitatibus optio odio ad illum distinctio velit voluptatum voluptates, 
+                            ipsum hic ratione dicta adipisci natus dolor!
+                            quisquam illo necessitatibus optio odio ad illum distinctio velit voluptatum voluptates, 
+                            ipsum hic ratione dicta adipisci natus dolor!
+                            quisquam illo necessitatibus optio odio ad illum distinctio velit voluptatum voluptates, 
+                            ipsum hic ratione dicta adipisci natus dolor!
+                        </p>
+                        <button className="transition  hover:text-[var(--green)]  border-[1px] hover:bg-transparent hover:border-[var(--green)] border-[var(--green)] p-2 my-2 rounded-md bg-[var(--green)] text-black">
+                            View page
+                        </button>
                     </div>
                 </div>
             </div>

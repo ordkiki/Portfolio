@@ -14,20 +14,20 @@ function Navbar() {
 
       {/*desktop device */}
       <ul className=" Navbar hidden justify-around  items-center lg:flex w-[40vw]">
-        <li>
-          <Link to='/' className="link-style">Home</Link>
+        <li className="hover:scale-[1.1] transition-all">
+          <Link to='/' className="link-style hover:scale-[1.1]">Home</Link>
         </li>
-        <li>
-          <Link to="/Service" className="link-style">Service</Link>
+        <li className="hover:scale-[1.1] transition-all">
+          <Link to="/Service" className="link-style hover:scale-[1.1]">Service</Link>
         </li>
-        <li>
-          <Link to="/Resume" className="link-style">Resume</Link>
+        <li className="hover:scale-[1.1] transition-all">
+          <Link to="/Resume" className="link-style hover:scale-[1.1]">Resume</Link>
         </li>
-        <li>
-          <Link to="/Work" className="link-style">Work</Link>
+        <li className="hover:scale-[1.1] transition-all">
+          <Link to="/Work" className="link-style hover:scale-[1.1]">Work</Link>
         </li>
 
-        <li>
+        <li className="hover:scale-[1.1] transition-all">
           <Link to="/Contact" className="text-black bg-green px-4 p-1 rounded-[20px]">Hire Me</Link>
         </li>
       </ul>

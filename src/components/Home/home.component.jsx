@@ -88,9 +88,9 @@ export const Homecomponent = () => {
             <div className="-z-20  mx-5 relative flex justify-center w-[80vw] h-[40vh] lg:w-[30vw] my-10 items-center">
               {/* Cercle animé (arrière-plan) */}
               <div className="cercle w-[80vw] h-[80vw] sm:w-[30vw] sm:h-[30vw] lg:w-[20vw] lg:h-[20vw] 
-      shadow-[var(--green)] shadow-md border-solid border-[3px] 
-      border-t-[var(--green)] border-transparent absolute animate-spin 
-      rounded-full z-0">
+                shadow-[var(--green)] shadow-md border-solid border-[3px] 
+                border-t-[var(--green)] border-transparent absolute animate-spin 
+                rounded-full z-0">
               </div>
 
               {/* Conteneur de l'image (premier plan) */}

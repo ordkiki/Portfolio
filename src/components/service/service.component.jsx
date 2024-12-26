@@ -19,7 +19,7 @@ function Service(props) {
   return isload ? 
     (<Loading/>)
     : (
-    <div className="hover:text-[var(--green)] transition-colors text-[rgba(255,255,255,0.7)] w-[80vw] lg:w-[35vw] p-2">
+    <div className="hover:scale-[1.1] transition hover:text-[var(--green)] text-[rgba(255,255,255,0.7)] w-[80vw] lg:w-[35vw] p-2">
       <div className="flex items-center justify-between w-[80vw] lg:w-[35vw]">
         <h3 className="font-thin text-5xl w-fit">{props.num}</h3>
         <BsArrowDownRight className="hover:transition-all  hover:-rotate-45 bg-white text-black p-2 text-3xl rounded-full"></BsArrowDownRight>
