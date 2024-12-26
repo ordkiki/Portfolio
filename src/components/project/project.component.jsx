@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "../navbar/Navbar"
 import Loading from "../loader/spinner";
+import WorkComponent from "../Work/WorkComponent";
 
 function Work() {
   const [isload, setLoad] = useState(true)
@@ -20,6 +21,9 @@ function Work() {
     : (
     <div>
         <Navbar></Navbar>
+        <div>
+          <WorkComponent/>
+        </div>
     </div>
   )
 }

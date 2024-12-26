@@ -10,7 +10,7 @@ import CV_URL from "../../assets/pdf/CV_RAKOTOARINO_Onjaniaina_Rolland.pdf"
 
 export const Homecomponent = () => {
   const competences = [
-    { number: "", titre: " years", titreSuite: "of experience" },
+    { number: "3ans", titre: "expercience", titreSuite: "Academique" },
     { number: "281", titre: " commit", titreSuite: "in git" },
     { number: "3", titre: " project", titreSuite: "done" },
   ];
@@ -73,7 +73,7 @@ export const Homecomponent = () => {
                   <button
                     onClick={() => { DonwloadCV(pdf_CV_URL) }}
                     className="  flex  items-center text-[14px]  text-green border p-2 rounded-lg">
-                    DOWNLOAD
+                    Mon CV
                     <FaDownload className="ml-5">
                     </FaDownload>
                   </button>
