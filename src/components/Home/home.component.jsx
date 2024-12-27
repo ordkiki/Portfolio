@@ -8,7 +8,7 @@ import CV_URL from "../../assets/pdf/CV_RAKOTOARINO_Onjaniaina_Rolland.pdf"
 
 
 
-export const Homecomponent = () => {
+export const  Homecomponent = () => {
   const competences = [
     { number: "3ans", titre: "expercience", titreSuite: "Academique" },
     { number: "281", titre: " commit", titreSuite: "in git" },

@@ -7,16 +7,19 @@ function Carousel() {
     const [Current, SetCurrent] = useState(0);
     const Items = [
         {
-            "id": 1,
+            "id": "01",
             "image": portfolio,
             "Titre ": "Portfolio",
+            "Techno" : "REACTJS, PHP",
             "link ": "/ordkiki.vercel.app",
         },
         {
-            "id": 2,
+            "id": "02",
             "image": Ecole_manager,
             "Titre ": "/Ecole_manager",
             "link ": "/Ecole_manager.vercel.app",
+            // "link ": "/ordkiki.vercel.app",
+            "Techno" : "REACTJS, PHP",
         }
 
     ]
@@ -32,12 +35,11 @@ function Carousel() {
                 <h3 className="text-2xl my-4">Mes projets</h3>
                 <div className="block lg:flex flex-row-reverse   justify-center items-center">
 
-                    <div className="  flex justify-between items-center w-[90vw] lg:w-[40vw]">
-                        <BiLeftArrow onClick={PrevCarousel} className="text-3xl bg-[rgba(255,255,255,0.1)] p-2 rounded-full cursor-pointer hover:scale-[1.2] transition " />
+                    <div className="   w-[90vw] lg:w-[40vw]">
                         <div className="object-cover  w-full lg:w-[42vw] p-4 h-[50vh] justify-center items-center flex">
 
                             {
-
+                                
                                 Items.map((item, index) =>
                                     Current === index && (
                                         <div className="" key={index}>
@@ -51,7 +53,11 @@ function Carousel() {
                             }
 
                         </div>
-                        <BiRightArrow onClick={NextCarousel} className="text-3xl bg-[rgba(255,255,255,0.1)] p-2 rounded-full cursor-pointer hover:scale-[1.2] transition" />
+                        <div className=" mx-4 items-right flex w-[5vw] justify-between">
+                            <BiLeftArrow onClick={PrevCarousel} className="text-3xl text-black bg-[var(--green)] p-2 rounded cursor-pointer hover:scale-[1.2] transition " />
+                            <BiRightArrow onClick={NextCarousel} className="text-3xl text-black bg-[var(--green)] p-2 rounded cursor-pointer hover:scale-[1.2] transition" />
+
+                        </div>
                     </div>
 
                     <div className="lg:w-[30vw] w-full my-4 ">

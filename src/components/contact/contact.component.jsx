@@ -59,31 +59,31 @@ function Contactcomponent() {
                 <input 
                   onChange={handleChange} 
                   name="Name" 
-                  className=" px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[47%] w-[83vw] outline-none p-[4px] lg:m-0 my-2 " 
+                  className="  outline-offset-[var(--green)] px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[47%] w-[83vw] outline-none p-[4px] lg:m-0 my-2 " 
                   placeholder="Name" type="Name" />
                 <input 
                   onChange={handleChange} 
                   name="LastName" 
-                  className=" px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[47%] w-[83vw] outline-none p-[4px] lg:m-0  my-2" placeholder="Last name" type="Last name" />
+                  className="  outline-offset-[var(--green)] px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[47%] w-[83vw] outline-none p-[4px] lg:m-0  my-2" placeholder="Last name" type="Last name" />
               </div>
 
               <div className="block lg:flex my-2 justify-around w-[100%]">
                 <input 
                   onChange={handleChange} 
                   name="Email" 
-                  className=" px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[47%] w-[83vw] outline-none p-[4px] lg:m-0  my-2" 
+                  className="  outline-offset-[var(--green)] px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[47%] w-[83vw] outline-none p-[4px] lg:m-0  my-2" 
                   placeholder="Email adress" type="email" />
                 <input 
                   onChange={handleChange} 
                   name="Telephone" 
-                  className=" px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[47%] w-[83vw] outline-none p-[4px] lg:m-0  my-2" 
+                  className="  outline-offset-[var(--green)] px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[47%] w-[83vw] outline-none p-[4px] lg:m-0  my-2" 
                   placeholder="Phone number" type="number" />
               </div>
               <div className="my-4 flex justify-around w-[100%]">
                 <input 
                   onChange={handleChange} 
                   name="Country" 
-                  className=" px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[96%] w-[83vw] outline-none p-[4px]" 
+                  className="  outline-offset-[var(--green)] px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[96%] w-[83vw] outline-none p-[4px]" 
                   placeholder="select country" type="name" />
               </div>
 
