@@ -19,17 +19,18 @@ function Contactcomponent() {
     try {
       console.log(FormData);
       
-      await axios.post("http://localhost/API-Portfolio/Visiteur/Add",
+      await axios.post("http://localhost/Backend/Portfolio/message",
         FormData,
         {
           headers: { "Content-Type": "application/json" },
         }
       )
+      alert("Envoyer avec succes")
     } catch (error) {
       console.log(error);
+      alert("Envoyer avec succes :" . error)
       
     }
-    alert("Votre message est envoyé avec succes");
     
   }
   const [isload, setLoad] = useState(true)
@@ -58,13 +59,15 @@ function Contactcomponent() {
               <div className="block lg:flex my-4 justify-around w-[100%]">
                 <input 
                   onChange={handleChange} 
-                  name="Name" 
+                  name="Nom" 
                   className="  outline-offset-[var(--green)] px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[47%] w-[83vw] outline-none p-[4px] lg:m-0 my-2 " 
-                  placeholder="Name" type="Name" />
+                  placeholder="RAKOTOARINO" type="Nom" 
+                />
                 <input 
                   onChange={handleChange} 
-                  name="LastName" 
-                  className="  outline-offset-[var(--green)] px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[47%] w-[83vw] outline-none p-[4px] lg:m-0  my-2" placeholder="Last name" type="Last name" />
+                  name="Prenom" 
+                  className="  outline-offset-[var(--green)] px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[47%] w-[83vw] outline-none p-[4px] lg:m-0  my-2" placeholder="Onjaniaina Rolland" type="Onjaniaina Rolland" 
+                />
               </div>
 
               <div className="block lg:flex my-2 justify-around w-[100%]">
@@ -72,26 +75,31 @@ function Contactcomponent() {
                   onChange={handleChange} 
                   name="Email" 
                   className="  outline-offset-[var(--green)] px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[47%] w-[83vw] outline-none p-[4px] lg:m-0  my-2" 
-                  placeholder="Email adress" type="email" />
+                  placeholder="exemple@gmail.com" type="email" 
+                />
                 <input 
                   onChange={handleChange} 
                   name="Telephone" 
                   className="  outline-offset-[var(--green)] px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[47%] w-[83vw] outline-none p-[4px] lg:m-0  my-2" 
-                  placeholder="Phone number" type="number" />
+                  placeholder="0381300400" type="number" 
+                />
               </div>
               <div className="my-4 flex justify-around w-[100%]">
                 <input 
                   onChange={handleChange} 
-                  name="Country" 
+                  name="Pays" 
                   className="  outline-offset-[var(--green)] px-1 rounded-lg bg-[rgba(0,0,0,0.4)] lg:w-[96%] w-[83vw] outline-none p-[4px]" 
-                  placeholder="select country" type="name" />
+                  placeholder="Madagascar" type="text" 
+                />
               </div>
 
               <div className="my-4 flex justify-center w-[100%]">
-                <textarea 
+                <textarea
+                  name="Message" 
                   onChange={handleChange}
                   className=" bg-[rgba(0,0,0,0.4)]  w-[98%] outline-none p-[10px] h-[27vh]" 
-                  placeholder="Message" type="text" />
+                  placeholder="Message" type="text" 
+                />
               </div>
               <div className="px-4">
                 <button 
