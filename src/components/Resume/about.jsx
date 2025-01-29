@@ -3,7 +3,7 @@ import React from 'react'
 function About() {
   return (
     <div className='sm:p-0 p-4 w-[96vw] lg:w-[30vw]'>
-    <p className='Skills font-bold text-[24px]'>About Me</p>
+    <p className='Skills font-bold text-[24px]'>Apropos de moi</p>
     <p className='text-[rgba(255,255,255,0.4)] my-4 text-[14px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio omnis sit odit mollitia nihil corrupti fugit officiis adipisci rerum quaerat!</p>
     <div className='flex justify-between'>
         <table className='sm:p-0 p-4 w-[96vw] lg:w-[30vw]'>
